@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UnServicioService } from './services/un-servicio.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'prueba-demo';
+
+
+  constructor(public unServicioService:UnServicioService){}
+
+  ngOnInit(): void {
+    this.unServicioService.data;
+
+  }
 }
